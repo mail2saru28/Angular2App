@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var RoleCategoriesListComponent = /** @class */ (function () {
     function RoleCategoriesListComponent() {
+        this.isCollapsed = false;
     }
     RoleCategoriesListComponent = __decorate([
         core_1.Component({

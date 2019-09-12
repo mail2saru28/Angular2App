@@ -6,9 +6,9 @@
                 <li *ngFor="let role of roles" class="list-group-item-action">
                     <!--<span class="badge">{{role.id}}</span> {{role.name}}-->
                     <!--<span data-placeholder="&#xe82a;">{{role.name}}</span>-->
-                    <div  class="mt-4"
+                    <div class="mt-4"
                          (click)="onSelect(role)"
-                         [class.selected]="role === selectedRole" >
+                         [class.selected]="role === selectedRole">
                         <i class=""></i>
 
                         {{role.name}}
@@ -16,7 +16,6 @@
 
                 </li>
             </ul>
-
         </div>
         <div class="col-7" [hidden]="isHidden">
             <ul class="list-group mt-4">
@@ -35,8 +34,8 @@
                 </div>-->
             </ul>
 
-
         </div>
     </div>
     <router-outlet></router-outlet>
 </div>
+

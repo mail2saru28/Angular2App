@@ -5,5 +5,5 @@
     templateUrl: './role-categories-list.html'
 })
 export class RoleCategoriesListComponent {
-  
+    public isCollapsed = false;
 }

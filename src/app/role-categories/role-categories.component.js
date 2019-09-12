@@ -12,13 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var role_category_constants_1 = require("./role-category-constants");
 var router_1 = require("@angular/router");
+var auth_service_1 = require("../auth.service");
 var RoleCategoriesComponent = /** @class */ (function () {
-    function RoleCategoriesComponent(router) {
+    function RoleCategoriesComponent(router, authService) {
         this.router = router;
-        this.roles = role_category_constants_1.Roles;
+        this.authService = authService;
         this.roleCategoryTypes = role_category_constants_1.RoleCategoryTypes;
         this.isHidden = true;
     }
+    RoleCategoriesComponent.prototype.ngOnInit = function () { this.getRoles(); };
     RoleCategoriesComponent.prototype.onSelect = function (role) {
         this.isHidden = false;
         this.selectedRole = role;
@@ -28,12 +30,22 @@ var RoleCategoriesComponent = /** @class */ (function () {
         //this.router.navigate(['/roleCategoryList']);
         // this.router.navigateByUrl('/list');
     };
+    //getRoles() {
+    //    this.roles = this.authService.getRoles();
+    //    console.log(this.roles);
+    //}
+    RoleCategoriesComponent.prototype.getRoles = function () {
+        this.authService.getRoles().subscribe(function (response) {
+            //window.location.href = response.url;
+        }), function (error) { return console.log('Error in Roles'); },
+            function () { return console.info('Error in Roles'); };
+    };
     RoleCategoriesComponent = __decorate([
         core_1.Component({
             selector: 'role-categories',
             templateUrl: './role-categories.html'
         }),
-        __metadata("design:paramtypes", [router_1.Router])
+        __metadata("design:paramtypes", [router_1.Router, auth_service_1.AuthService])
     ], RoleCategoriesComponent);
     return RoleCategoriesComponent;
 }());
