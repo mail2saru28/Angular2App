@@ -10,35 +10,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var role_category_constants_1 = require("./role-category-constants");
 var router_1 = require("@angular/router");
 var auth_service_1 = require("../auth.service");
 var RoleCategoriesComponent = /** @class */ (function () {
     function RoleCategoriesComponent(router, authService) {
         this.router = router;
         this.authService = authService;
-        this.roleCategoryTypes = role_category_constants_1.RoleCategoryTypes;
         this.isHidden = true;
     }
-    RoleCategoriesComponent.prototype.ngOnInit = function () { this.getRoles(); };
+    RoleCategoriesComponent.prototype.ngOnInit = function () { this.getRoles(); this.getLinks(); };
     RoleCategoriesComponent.prototype.onSelect = function (role) {
-        this.isHidden = false;
         this.selectedRole = role;
     };
     RoleCategoriesComponent.prototype.OnSelectCategory = function (roleCategory) {
         this.selectedCategory = roleCategory;
-        //this.router.navigate(['/roleCategoryList']);
-        // this.router.navigateByUrl('/list');
     };
-    //getRoles() {
-    //    this.roles = this.authService.getRoles();
-    //    console.log(this.roles);
-    //}
     RoleCategoriesComponent.prototype.getRoles = function () {
-        this.authService.getRoles().subscribe(function (response) {
-            //window.location.href = response.url;
-        }), function (error) { return console.log('Error in Roles'); },
-            function () { return console.info('Error in Roles'); };
+        var _this = this;
+        this.authService.getRoles('getAllRoles')
+            .subscribe(function (roles) {
+            _this.roles = roles.collection;
+            console.log(_this.roles);
+        });
+    };
+    RoleCategoriesComponent.prototype.getLinks = function () {
+        var _this = this;
+        this.authService.getLinks('getAllLinks').subscribe(function (links) { _this.links = links.collection; });
     };
     RoleCategoriesComponent = __decorate([
         core_1.Component({

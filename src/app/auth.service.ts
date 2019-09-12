@@ -2,9 +2,9 @@
 import { Netlist } from './models/Netlist';
 import { AppConstants } from './app-constants';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { HttpClientModule, HttpClient, HttpResponse, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators'
+import { map, catchError } from 'rxjs/operators'
 
 @Injectable({
     providedIn: 'root',
@@ -14,26 +14,36 @@ export class AuthService {
     data: Netlist;
     constructor(public httpService: HttpClient) { }
 
-
-    getRoles(): Observable<Netlist> {
-        console.log(this.apiUrl);
-        const headers = new HttpHeaders({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        });
-        const options = { headers: headers, observe: 'body', responseType: "json", withCredentials: true };
-       return this.httpService.get<Netlist>(this.apiUrl);
-       //// return this.httpService.get(`${this.apiUrl}`);
-       // return this.httpService.get(this.apiUrl).map((res:any) => res.json()).subscribe((data:any) => {
-       //     console.log(data);
-           
-       // });
+    getRoles(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
+    getLinks(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url).pipe(catchError(this.handleError));
     }
 
-    //return this.httpService.get(this.apiUrl).map(res => res.json()).subscribe(data => {
-    //      console.log(data);
-    //      this.posts = data;
-    //  });
+    getLinkData(url: string, id: number): Observable<Netlist> {
+        const newurl = `${this.apiUrl + "/" + url + "/"+id}`;
+        return this.httpService.get<Netlist>(newurl).pipe(catchError(this.handleError));
+    }
 
+
+    private handleError(error: HttpErrorResponse) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        } else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error(
+                `Backend returned code ${error.status}, ` +
+                `body was: ${error.error}`);
+        }
+        // return an observable with a user-facing error message
+        return throwError(
+            'Something bad happened; please try again later.');
+    };
 }
 

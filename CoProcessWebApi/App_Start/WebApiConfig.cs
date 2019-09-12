@@ -13,15 +13,9 @@ namespace CoProcessWebApi
         {
             // Web API configuration and services
 
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+           
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-
+         
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
             //By default Web API return XML data  
@@ -35,6 +29,19 @@ namespace CoProcessWebApi
             //For converting data in Camel Case  
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
                 new CamelCasePropertyNamesContractResolver();
+            // Web API routes
+            config.MapHttpAttributeRoutes();
+            config.Routes.MapHttpRoute(
+               name: "DefaultApi",
+               routeTemplate: "api/{controller}/{id}",
+               defaults: new { id = RouteParameter.Optional }
+           );
+         //   config.Routes.MapHttpRoute(
+         //    name: "controler",
+         //    routeTemplate: "api/{controller}/{action}/{id}",
+         //    defaults: new { id = RouteParameter.Optional }
+         //);
+
         }
     }
 }

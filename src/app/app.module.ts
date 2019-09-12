@@ -6,17 +6,18 @@ import { RoleCategoriesListComponent } from './role-categories-list/role-categor
 import { AppComponent }  from './app.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatExpansionModule } from '@angular/material';
-import { MatListModule } from '@angular/material/list';
+//import { MatExpansionModule } from '@angular/material';
+//import { MatListModule } from '@angular/material/list';
 import { AuthService } from './auth.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; 
+import { MaterialModule } from './material.module';
 @NgModule({
     imports: [BrowserModule, BrowserAnimationsModule,AppRoutingModule, RouterModule.forRoot([
         { path: '', component: RoleCategoriesComponent },
-        { path: 'list', component: RoleCategoriesListComponent },
-    ]), MatExpansionModule,
-        MatListModule, HttpModule, HttpClientModule],
+        { path: 'getLinkDataById/:id', component: RoleCategoriesListComponent },
+    ]),
+        MaterialModule, HttpModule, HttpClientModule],
     declarations: [AppComponent, RoleCategoriesComponent, RoleCategoriesListComponent],
     bootstrap: [AppComponent],
     providers: [AuthService],

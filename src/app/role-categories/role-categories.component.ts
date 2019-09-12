@@ -1,4 +1,4 @@
-﻿import { Component,OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { Role } from './role-component';
 import { Roles, RoleCategoryTypes } from './role-category-constants';
 import { Router } from '@angular/router';
@@ -13,39 +13,38 @@ import { Observable } from "rxjs";
 })
 export class RoleCategoriesComponent implements OnInit {
     constructor(private router: Router, private authService: AuthService) {
-       
+
     }
-    ngOnInit() { this.getRoles();}
+    ngOnInit() { this.getRoles(); this.getLinks(); }
     //roles: Role[];
     //roles = Roles;
     selectedRole: Role;
-    roles: Observable<Netlist>;
-    roleCategoryTypes = RoleCategoryTypes;
+    roles: Role[];
+    links :any[];
     selectedCategory: Role;
 
     isHidden: boolean = true;
 
     onSelect(role: Role): void {
-        this.isHidden = false;
+       
         this.selectedRole = role;
 
     }
     OnSelectCategory(roleCategory: Role): void {
         this.selectedCategory = roleCategory;
-        //this.router.navigate(['/roleCategoryList']);
-        // this.router.navigateByUrl('/list');
+       
     }
-    
-    //getRoles() {
-    //    this.roles = this.authService.getRoles();
-    //    console.log(this.roles);
-    //}
-    getRoles() {
-        this.authService.getRoles().subscribe(response => {
-          
-            //window.location.href = response.url;
-            
-        }), (error:any) => console.log('Error in Roles'),
-            () => console.info('Error in Roles');
+
+   
+    getRoles(): void {
+        this.authService.getRoles('getAllRoles')
+            .subscribe(roles => {
+
+                this.roles = roles.collection;
+                console.log(this.roles);
+            });
+    }
+    getLinks(): void {
+        this.authService.getLinks('getAllLinks').subscribe(links => {  this.links = links.collection });
     }
 }

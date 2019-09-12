@@ -14,11 +14,12 @@ var role_categories_list_component_1 = require("./role-categories-list/role-cate
 var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
 var animations_1 = require("@angular/platform-browser/animations");
-var material_1 = require("@angular/material");
-var list_1 = require("@angular/material/list");
+//import { MatExpansionModule } from '@angular/material';
+//import { MatListModule } from '@angular/material/list';
 var auth_service_1 = require("./auth.service");
 var http_1 = require("@angular/http");
 var http_2 = require("@angular/common/http");
+var material_module_1 = require("./material.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,9 +27,9 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, app_routing_module_1.AppRoutingModule, router_1.RouterModule.forRoot([
                     { path: '', component: role_categories_component_1.RoleCategoriesComponent },
-                    { path: 'list', component: role_categories_list_component_1.RoleCategoriesListComponent },
-                ]), material_1.MatExpansionModule,
-                list_1.MatListModule, http_1.HttpModule, http_2.HttpClientModule],
+                    { path: 'getLinkDataById/:id', component: role_categories_list_component_1.RoleCategoriesListComponent },
+                ]),
+                material_module_1.MaterialModule, http_1.HttpModule, http_2.HttpClientModule],
             declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [auth_service_1.AuthService],

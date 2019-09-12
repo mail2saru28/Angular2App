@@ -1,3 +1,3 @@
 ﻿export interface Role {
-    id: number, name: string
+    roleId: number, roleName: string
 }

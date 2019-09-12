@@ -10,25 +10,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var rxjs_1 = require("rxjs");
 var http_1 = require("@angular/common/http");
+var operators_1 = require("rxjs/operators");
 var AuthService = /** @class */ (function () {
     function AuthService(httpService) {
         this.httpService = httpService;
         this.apiUrl = "https://localhost:44339/api/Values";
     }
-    AuthService.prototype.getRoles = function () {
-        console.log(this.apiUrl);
-        var headers = new http_1.HttpHeaders({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        });
-        var options = { headers: headers, observe: 'body', responseType: "json", withCredentials: true };
-        return this.httpService.get(this.apiUrl);
-        //// return this.httpService.get(`${this.apiUrl}`);
-        // return this.httpService.get(this.apiUrl).map((res:any) => res.json()).subscribe((data:any) => {
-        //     console.log(data);
-        // });
+    AuthService.prototype.getRoles = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
     };
+    AuthService.prototype.getLinks = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url).pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.getLinkData = function (url, id) {
+        var newurl = "" + (this.apiUrl + "/" + url + "/" + id);
+        return this.httpService.get(newurl).pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.handleError = function (error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error("Backend returned code " + error.status + ", " +
+                ("body was: " + error.error));
+        }
+        // return an observable with a user-facing error message
+        return rxjs_1.throwError('Something bad happened; please try again later.');
+    };
+    ;
     AuthService = __decorate([
         core_1.Injectable({
             providedIn: 'root',
