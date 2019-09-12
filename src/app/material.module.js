@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var angular_bootstrap_md_1 = require("angular-bootstrap-md");
 var material_1 = require("@angular/material");
 var MaterialModule = /** @class */ (function () {
     function MaterialModule() {
@@ -19,7 +20,9 @@ var MaterialModule = /** @class */ (function () {
                 material_1.MatMenuModule,
                 material_1.MatToolbarModule,
                 material_1.MatExpansionModule,
-                material_1.MatListModule
+                material_1.MatListModule,
+                angular_bootstrap_md_1.MDBBootstrapModule.forRoot(),
+                material_1.MatCardModule
             ],
             exports: [
                 material_1.MatButtonModule,
@@ -27,7 +30,9 @@ var MaterialModule = /** @class */ (function () {
                 material_1.MatMenuModule,
                 material_1.MatToolbarModule,
                 material_1.MatExpansionModule,
-                material_1.MatListModule
+                material_1.MatListModule,
+                angular_bootstrap_md_1.MDBBootstrapModule,
+                material_1.MatCardModule
             ]
         })
     ], MaterialModule);

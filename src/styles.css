@@ -1,14 +1,64 @@
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+body {
+    background-color: #f5f9fd !important;
 }
 
-.list-group{
+.header {
+    padding: 30px 280px;
+    background-color: #155592;
+    text-align: left;
+}
+
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+.list-group {
     list-style: none;
 }
+
+.text-off-white {
+    color: #f17921;
+}
+
 .fill-remaining-space {
     /* This fills the remaining space, by using flexbox. 
      Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
+}
+
+.role {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .role:hover {
+        background-color: #f5f9fd;
+    }
+
+    .role span{
+        padding-left: 10px;
+    }
+
+.background-white {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 19px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    -webkit-transition: color .1s ease-in-out,background-color .1s ease-in-out;
+    transition: color .1s ease-in-out,background-color .1s ease-in-out;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.0125), 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.0125), 0 1px 1px rgba(0,0,0,0.05);
+    border-top-width: .0625rem;
+    border-bottom-width: calc(.2rem + .0625rem);
+    background-color: #228be6;
+    background-color: #145592 !important;
+    border-color: #145592 !important;
 }

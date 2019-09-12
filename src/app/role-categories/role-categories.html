@@ -1,34 +1,27 @@
 ﻿
 <div class="container">
-    <div class="row justify-content-md-around mt-5">
-        <div class="col-4">
-            <ul class="list-group ">
-                <li *ngFor="let role of roles" class="list-group-item-action">
-                    <!--<span class="badge">{{role.roleId}}</span> {{role.roleName}}-->
-                    <!--<span data-placeholder="&#xe82a;">{{role.roleName}}</span>-->
-                    <div class="mt-4"
-                         (click)="onSelect(role)"
-                         [class.selected]="role === selectedRole">
-                        <i class="fas fa-user"></i>
-
+    <div class="row justify-content-md-around mt-5 background-white">
+        <div class="col-4 px-1">
+            <div class="" *ngFor="let role of roles">
+                <div class="p-3 text-off-white role"
+                     [routerLink]="['/product-owner']"
+                     [class.selected]="role === selectedRole">
+                    <i class="fas fa-user"></i>
+                    <span>
                         {{role.roleName}}
-                    </div>
-
-                </li>
-            </ul>
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="col-7">
-            <ul class="list-group mt-4">
-                <li *ngFor="let link of links" class="list-group-item-light">
-                    <div class="mt-2">
-                        <button class="btn btn-primary" [routerLink]="['/getLinkDataById',link.linkId]" [class.selected]="link === SelectedLink">
-                            {{link.linkName}}
-                        </button>
-                        <span></span>
-                    </div>
-                </li>
-            </ul>
-
+            <div *ngFor="let link of links">
+                <div class="mt-2">
+                    <button class="btn btn-primary" [routerLink]="['/jump-start',link.linkId]" [class.selected]="link === SelectedLink">
+                        {{link.linkName}}
+                    </button>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </div>
     <router-outlet></router-outlet>

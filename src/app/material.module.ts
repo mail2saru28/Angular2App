@@ -1,12 +1,14 @@
 ﻿import { NgModule } from '@angular/core';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatCardModule 
+    
 } from '@angular/material';
 
 @NgModule({
@@ -16,7 +18,9 @@ import {
         MatMenuModule,
         MatToolbarModule,
         MatExpansionModule,
-        MatListModule
+        MatListModule,
+        MDBBootstrapModule.forRoot(),
+        MatCardModule 
     ],
     exports: [
         MatButtonModule,
@@ -24,7 +28,9 @@ import {
         MatMenuModule,
         MatToolbarModule,
         MatExpansionModule,
-        MatListModule
+        MatListModule,
+        MDBBootstrapModule,
+        MatCardModule 
     ]
 })
 

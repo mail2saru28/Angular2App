@@ -20,6 +20,7 @@ var auth_service_1 = require("./auth.service");
 var http_1 = require("@angular/http");
 var http_2 = require("@angular/common/http");
 var material_module_1 = require("./material.module");
+var product_owner_component_1 = require("../app/product-owner/product-owner.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,10 +28,11 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, app_routing_module_1.AppRoutingModule, router_1.RouterModule.forRoot([
                     { path: '', component: role_categories_component_1.RoleCategoriesComponent },
-                    { path: 'getLinkDataById/:id', component: role_categories_list_component_1.RoleCategoriesListComponent },
+                    { path: 'jump-start/:id', component: role_categories_list_component_1.RoleCategoriesListComponent },
+                    { path: 'product-owner', component: product_owner_component_1.ProductOwnerComponent },
                 ]),
                 material_module_1.MaterialModule, http_1.HttpModule, http_2.HttpClientModule],
-            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent],
+            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent, product_owner_component_1.ProductOwnerComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [auth_service_1.AuthService],
         })

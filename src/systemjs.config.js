@@ -49,6 +49,8 @@
             "@angular/material/list": 'npm:@angular/material/bundles/material-list.umd.js',
             "@angular/material/core": 'npm:@angular/material/bundles/material-core.umd.js',
             "@angular/material/divider": 'npm:@angular/material/bundles/material-divider.umd.js',
+            "@angular/material/card": 'npm:@angular/material/bundles/material-card.umd.js',
+            "angular-bootstrap-md": 'npm:angular-bootstrap-md/bundles/angular-bootstrap-md.umd.js',
             // other libraries
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'

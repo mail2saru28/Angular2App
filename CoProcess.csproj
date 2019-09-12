@@ -115,9 +115,12 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\product-owner\product-owner.component.css" />
+    <Content Include="src\app\product-owner\product-owner.component.html" />
     <Content Include="src\app\role-categories-list\role-categories-list.html" />
     <Content Include="src\app\role-categories\role-categories.html" />
     <Content Include="src\assets\all.js" />
+    <Content Include="src\assets\img\comakeit-logo.png" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
@@ -166,6 +169,7 @@
     <TypeScriptCompile Include="src\app\material.module.ts" />
     <TypeScriptCompile Include="src\app\models\link.ts" />
     <TypeScriptCompile Include="src\app\models\netlist.ts" />
+    <TypeScriptCompile Include="src\app\product-owner\product-owner.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories-list\role-categories-list.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-categories.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-category-constants.ts" />

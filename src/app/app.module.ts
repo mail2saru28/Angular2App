@@ -12,13 +12,17 @@ import { AuthService } from './auth.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http'; 
 import { MaterialModule } from './material.module';
+import { ProductOwnerComponent } from '../app/product-owner/product-owner.component';
+
+
 @NgModule({
     imports: [BrowserModule, BrowserAnimationsModule,AppRoutingModule, RouterModule.forRoot([
         { path: '', component: RoleCategoriesComponent },
-        { path: 'getLinkDataById/:id', component: RoleCategoriesListComponent },
+        { path: 'jump-start/:id', component: RoleCategoriesListComponent },
+        { path: 'product-owner', component: ProductOwnerComponent },
     ]),
         MaterialModule, HttpModule, HttpClientModule],
-    declarations: [AppComponent, RoleCategoriesComponent, RoleCategoriesListComponent],
+    declarations: [AppComponent, RoleCategoriesComponent, RoleCategoriesListComponent, ProductOwnerComponent],
     bootstrap: [AppComponent],
     providers: [AuthService],
 })
