@@ -1,16 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
 namespace CoProcessWebApi.Models
 {
-    public class Tools
+    public class ProductOwnerResponsibility
     {
         [Key]
-        public int ToolId { get; set; }
-        public string ToolName { get; set; }
-        public int LinkId { get; set; }
-        public int RoleId { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-
     }
 }

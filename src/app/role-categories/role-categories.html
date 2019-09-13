@@ -16,7 +16,7 @@
         <div class="col-7">
             <div *ngFor="let link of links">
                 <div class="mt-2">
-                    <button class="btn btn-primary" [routerLink]="['/jump-start',link.linkId]" [class.selected]="link === SelectedLink">
+                    <button class="btn btn-primary" [routerLink]="['/jump-start',link.linkId,link.linkName]" [class.selected]="link === SelectedLink">
                         {{link.linkName}}
                     </button>
                     <span></span>

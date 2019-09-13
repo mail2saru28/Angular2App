@@ -12,5 +12,6 @@ namespace CoProcessWebApi.Context
         public DbSet<People> Peoples { get; set; }
         public DbSet<Process> Processes { get; set; }
         public DbSet<Tools> Tools { get; set; }
+        public DbSet<ProductOwnerResponsibility> productOwnerResponsibilities { get; set; }
     }
 }

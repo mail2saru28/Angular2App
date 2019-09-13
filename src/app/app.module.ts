@@ -18,7 +18,7 @@ import { ProductOwnerComponent } from '../app/product-owner/product-owner.compon
 @NgModule({
     imports: [BrowserModule, BrowserAnimationsModule,AppRoutingModule, RouterModule.forRoot([
         { path: '', component: RoleCategoriesComponent },
-        { path: 'jump-start/:id', component: RoleCategoriesListComponent },
+        { path: 'jump-start/:id/:name', component: RoleCategoriesListComponent },
         { path: 'product-owner', component: ProductOwnerComponent },
     ]),
         MaterialModule, HttpModule, HttpClientModule],

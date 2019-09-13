@@ -10,5 +10,7 @@ namespace CoProcessWebApi.Models
         public string PeopleName { get; set; }
         public int LinkId { get; set; }
         public int RoleId { get; set; }
+        public string Description { get; set; }
+        
     }
 }

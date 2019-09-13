@@ -120,7 +120,13 @@
     <Content Include="src\app\role-categories-list\role-categories-list.html" />
     <Content Include="src\app\role-categories\role-categories.html" />
     <Content Include="src\assets\all.js" />
+    <Content Include="src\assets\img\client-needs.jpeg" />
     <Content Include="src\assets\img\comakeit-logo.png" />
+    <Content Include="src\assets\img\lucid-chart.png" />
+    <Content Include="src\assets\img\prioritising-needs.jpg" />
+    <Content Include="src\assets\img\product-backlog.jpg" />
+    <Content Include="src\assets\img\product-development.jpg" />
+    <Content Include="src\assets\img\vision.jpg" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />

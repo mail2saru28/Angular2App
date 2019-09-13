@@ -21,11 +21,25 @@ var RoleCategoriesListComponent = /** @class */ (function () {
     }
     RoleCategoriesListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.paramsSub = this.activatedRoute.params.subscribe(function (params) { return _this.id = parseInt(params['id'], 10); });
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.id = params['id'];
+            _this.linkName = params['name'];
+        });
+        //this.paramsSub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10), this.linkName = params['name']);
         this.getLinkData();
     };
     RoleCategoriesListComponent.prototype.getLinkData = function () {
-        this.authService.getLinkData('getLinksByLinkId', this.id).subscribe(function (linkInfo) { var data = linkInfo.collection; console.log(data); });
+        var _this = this;
+        this.authService.getLinkData('getLinksByLinkId', this.id).subscribe(function (linkInfo) {
+            var data = linkInfo.collection[0];
+            _this.peoples = data.peoples;
+            _this.processes = data.processes;
+            _this.tools = data.tools;
+            console.log(data);
+            console.log(_this.peoples);
+            console.log(_this.processes);
+            console.log(_this.tools);
+        });
     };
     RoleCategoriesListComponent = __decorate([
         core_1.Component({

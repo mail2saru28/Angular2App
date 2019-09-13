@@ -1,243 +1,81 @@
 ﻿
-<div class="container">
-    <h2 class="justify-content-xl-center"> Jump Start</h2>
-    <div class="card-deck mb-3 text-center mt-5">
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="btn btn-lg btn-block btn-primary">People</h4>
+    <div class="container">
+        <h2 class="justify-content-xl-center">{{linkName}}</h2>
+        <div class="card-deck mb-3 text-center mt-5">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="btn btn-lg btn-block btn-primary">People</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4" *ngFor="let people of peoples">
+                        <li class="accordion">
+                            <mat-accordion>
+                                <mat-expansion-panel>
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            <button class="btn btn-link">
+                                                {{people.peopleName}}
+                                            </button>
+                                        </mat-panel-title>
+
+                                    </mat-expansion-panel-header>
+                                    <p>{{people.description}}</p>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link">
-                                            Steering Commitee
-                                        </button>
-                                    </mat-panel-title>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="btn btn-lg btn-block btn-primary">Process</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4" *ngFor="let process of processes">
+                        <li class="accordion">
+                            <mat-accordion>
+                                <mat-expansion-panel>
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            <button class="btn btn-link">
+                                                {{process.processName}}
+                                            </button>
+                                        </mat-panel-title>
 
-                                </mat-expansion-panel-header>
-                                <p>Steering Commitee decides on the priorities or order of business of an organization and manages the general course of its operations.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Product Owner
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Product owner is a scrum development role for a person who represents the business or user community and is responsible for working with the user group to determine what features will be in the product release.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Dev Team
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Development team is an  self-organizing, cross-functional team of people who collectively are responsible for all of the work necessary to produce working, validated assets.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            QA
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p>  Quality assurance (QA) is a way of preventing mistakes and defects in manufactured products and avoiding problems when delivering products or services to customers.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                </ul>
+                                    </mat-expansion-panel-header>
+                                    <p>{{process.description}}</p>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="btn btn-lg btn-block btn-primary">Process</h4>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link">
-                                           Requirements Gathering
-                                        </button>
-                                    </mat-panel-title>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="btn btn-lg btn-block btn-primary">Tools</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4" *ngFor="let tool of tools">
+                        <li class="accordion">
+                            <mat-accordion>
+                                <mat-expansion-panel>
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            <button class="btn btn-link">
+                                                {{tool.toolName}}
+                                            </button>
+                                        </mat-panel-title>
 
-                                </mat-expansion-panel-header>
-                                <p>Steering Commitee decides on the priorities or order of business of an organization and manages the general course of its operations.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Product Backlog
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Product owner is a scrum development role for a person who represents the business or user community and is responsible for working with the user group to determine what features will be in the product release.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Dev Process
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Development team is an  self-organizing, cross-functional team of people who collectively are responsible for all of the work necessary to produce working, validated assets.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Post Dev Process
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p>  Quality assurance (QA) is a way of preventing mistakes and defects in manufactured products and avoiding problems when delivering products or services to customers.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                </ul>
+                                    </mat-expansion-panel-header>
+                                    <p>{{tool.description}}</p>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-                <h4 class="btn btn-lg btn-block btn-primary">Tools</h4>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link">
-                                            Confluence
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p>Steering Commitee decides on the priorities or order of business of an organization and manages the general course of its operations.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Bug Zilla
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Product owner is a scrum development role for a person who represents the business or user community and is responsible for working with the user group to determine what features will be in the product release.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Assembla
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p> Development team is an  self-organizing, cross-functional team of people who collectively are responsible for all of the work necessary to produce working, validated assets.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            GitHub
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p>  Quality assurance (QA) is a way of preventing mistakes and defects in manufactured products and avoiding problems when delivering products or services to customers.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                    <li class="accordion">
-                        <mat-accordion>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Jenkins
-                                        </button>
-                                    </mat-panel-title>
-
-                                </mat-expansion-panel-header>
-                                <p>  Quality assurance (QA) is a way of preventing mistakes and defects in manufactured products and avoiding problems when delivering products or services to customers.</p>
-                            </mat-expansion-panel>
-                        </mat-accordion>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
     </div>
-</div>
 
 

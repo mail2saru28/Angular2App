@@ -28,7 +28,7 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, app_routing_module_1.AppRoutingModule, router_1.RouterModule.forRoot([
                     { path: '', component: role_categories_component_1.RoleCategoriesComponent },
-                    { path: 'jump-start/:id', component: role_categories_list_component_1.RoleCategoriesListComponent },
+                    { path: 'jump-start/:id/:name', component: role_categories_list_component_1.RoleCategoriesListComponent },
                     { path: 'product-owner', component: product_owner_component_1.ProductOwnerComponent },
                 ]),
                 material_module_1.MaterialModule, http_1.HttpModule, http_2.HttpClientModule],

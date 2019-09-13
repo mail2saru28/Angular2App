@@ -46,6 +46,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.1",
     "@types/jasmine": "2.5.36",
     "@types/node": "^6.0.46",
     "canonical-path": "0.0.2",

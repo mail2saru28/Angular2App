@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
@@ -11,17 +11,35 @@ export class RoleCategoriesListComponent implements OnInit {
     public isCollapsed = false;
     id: number;
     paramsSub: any;
+    peoples: any[];
+    processes: any[];
+    tools: any[];
+    linkName: string;
     constructor(private authService: AuthService, private activatedRoute: ActivatedRoute,
         private router: Router) {
 
     }
     linkData: any[];
     ngOnInit() {
-        this.paramsSub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10));
+
+        this.activatedRoute.params.subscribe((params: Params) => {
+            this.id = params['id'];
+            this.linkName = params['name']
+        });
+        //this.paramsSub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10), this.linkName = params['name']);
         this.getLinkData();
     }
 
     getLinkData(): void {
-        this.authService.getLinkData('getLinksByLinkId', this.id).subscribe(linkInfo => { let data = linkInfo.collection; console.log(data) });
+        this.authService.getLinkData('getLinksByLinkId', this.id).subscribe(linkInfo => {
+            let data = linkInfo.collection[0];
+            this.peoples = data.peoples;
+            this.processes = data.processes;
+            this.tools = data.tools;
+            console.log(data);
+            console.log(this.peoples);
+            console.log(this.processes);
+            console.log(this.tools);
+        });
     }
 }
