@@ -20,22 +20,25 @@ export class RoleCategoriesComponent implements OnInit {
     //roles = Roles;
     selectedRole: Role;
     roles: Role[];
-    links :any[];
+    links: any[];
     selectedCategory: Role;
 
     isHidden: boolean = true;
 
     onSelect(role: Role): void {
-       
+
         this.selectedRole = role;
 
     }
     OnSelectCategory(roleCategory: Role): void {
         this.selectedCategory = roleCategory;
-       
+
     }
 
-   
+    //getRoles() {
+    //    this.roles = this.authService.getRoles();
+    //    console.log(this.roles);
+    //}
     getRoles(): void {
         this.authService.getRoles('getAllRoles')
             .subscribe(roles => {
@@ -45,6 +48,6 @@ export class RoleCategoriesComponent implements OnInit {
             });
     }
     getLinks(): void {
-        this.authService.getLinks('getAllLinks').subscribe(links => {  this.links = links.collection });
+        this.authService.getLinks('getAllLinks').subscribe(links => { this.links = links.collection });
     }
 }

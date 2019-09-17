@@ -25,6 +25,10 @@ var RoleCategoriesComponent = /** @class */ (function () {
     RoleCategoriesComponent.prototype.OnSelectCategory = function (roleCategory) {
         this.selectedCategory = roleCategory;
     };
+    //getRoles() {
+    //    this.roles = this.authService.getRoles();
+    //    console.log(this.roles);
+    //}
     RoleCategoriesComponent.prototype.getRoles = function () {
         var _this = this;
         this.authService.getRoles('getAllRoles')

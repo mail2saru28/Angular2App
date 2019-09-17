@@ -47,6 +47,8 @@
             '@angular/cdk/table': 'npm:/@angular/cdk/bundles/cdk-table.umd.js',
             "@angular/cdk/stepper": 'npm:/@angular/cdk/bundles/cdk-stepper.umd.js',
             "@angular/material/list": 'npm:@angular/material/bundles/material-list.umd.js',
+            "@angular/material/card": 'npm:@angular/material/bundles/material-card.umd.js',
+            "@angular/material/grid-list": 'npm:@angular/material/bundles/material-grid-list.umd.js',
             "@angular/material/core": 'npm:@angular/material/bundles/material-core.umd.js',
             "@angular/material/divider": 'npm:@angular/material/bundles/material-divider.umd.js',
             "@angular/material/card": 'npm:@angular/material/bundles/material-card.umd.js',
