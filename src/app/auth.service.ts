@@ -10,7 +10,7 @@ import { map, catchError } from 'rxjs/operators'
     providedIn: 'root',
 })
 export class AuthService {
-    apiUrl: string = "https://localhost:44339/api/Values" ;
+    apiUrl: string = "https://localhost:44339/api/Values";
     data: Netlist;
     constructor(public httpService: HttpClient) { }
 
@@ -25,13 +25,41 @@ export class AuthService {
     }
 
     getLinkData(url: string, id: number): Observable<Netlist> {
-        const newurl = `${this.apiUrl + "/" + url + "/"+id}`;
+        const newurl = `${this.apiUrl + "/" + url + "/" + id}`;
         return this.httpService.get<Netlist>(newurl).pipe(catchError(this.handleError));
     }
 
+    getProductOwnerResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
+    getArchitectResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
 
-   
-
+    }
+    getManagerResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
+    getDevTeamResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
+    getQAResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.

@@ -29,6 +29,26 @@ var AuthService = /** @class */ (function () {
         var newurl = "" + (this.apiUrl + "/" + url + "/" + id);
         return this.httpService.get(newurl).pipe(operators_1.catchError(this.handleError));
     };
+    AuthService.prototype.getProductOwnerResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.getArchitectResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.getManagerResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.getDevTeamResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
+    AuthService.prototype.getQAResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
     AuthService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.

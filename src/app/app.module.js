@@ -11,6 +11,10 @@ var platform_browser_1 = require("@angular/platform-browser");
 var app_routing_module_1 = require("./app-routing.module");
 var role_categories_component_1 = require("./role-categories/role-categories.component");
 var role_categories_list_component_1 = require("./role-categories-list/role-categories-list.component");
+var architect_component_1 = require("./architect/architect.component");
+var manager_component_1 = require("./manager/manager.component");
+var devteam_component_1 = require("./devteam/devteam.component");
+var qa_component_1 = require("./qa/qa.component");
 var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
 var animations_1 = require("@angular/platform-browser/animations");
@@ -29,10 +33,14 @@ var AppModule = /** @class */ (function () {
             imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, app_routing_module_1.AppRoutingModule, router_1.RouterModule.forRoot([
                     { path: '', component: role_categories_component_1.RoleCategoriesComponent },
                     { path: 'jump-start/:id/:name', component: role_categories_list_component_1.RoleCategoriesListComponent },
-                    { path: 'product-owner', component: product_owner_component_1.ProductOwnerComponent },
+                    { path: 'Product Owner', component: product_owner_component_1.ProductOwnerComponent },
+                    { path: 'Architect', component: architect_component_1.ArchitectComponent },
+                    { path: 'Manager', component: manager_component_1.ManagerComponent },
+                    { path: 'Dev Team', component: devteam_component_1.DevTeamComponent },
+                    { path: 'QA', component: qa_component_1.QAComponent },
                 ]),
                 material_module_1.MaterialModule, http_1.HttpModule, http_2.HttpClientModule],
-            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent, product_owner_component_1.ProductOwnerComponent],
+            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent, product_owner_component_1.ProductOwnerComponent, architect_component_1.ArchitectComponent, manager_component_1.ManagerComponent, devteam_component_1.DevTeamComponent, qa_component_1.QAComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [auth_service_1.AuthService],
         })
