@@ -11,8 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var auth_service_1 = require("../auth.service");
 var RoleCategoriesComponent = /** @class */ (function () {
-    function RoleCategoriesComponent(router) {
+    function RoleCategoriesComponent(router, authService) {
         this.router = router;
         this.authService = authService;
         this.isHidden = true;
@@ -45,40 +46,9 @@ var RoleCategoriesComponent = /** @class */ (function () {
             selector: 'role-categories',
             templateUrl: './role-categories.html'
         }),
-        __metadata("design:paramtypes", [router_1.Router])
+        __metadata("design:paramtypes", [router_1.Router, auth_service_1.AuthService])
     ], RoleCategoriesComponent);
     return RoleCategoriesComponent;
 }());
 exports.RoleCategoriesComponent = RoleCategoriesComponent;
-//export class RoleCategoriesComponent implements OnInit {
-//    constructor(private router: Router, private authService: AuthService) {
-//    }
-//    ngOnInit() { this.getRoles();}
-//    //roles: Role[];
-//    //roles = Roles;
-//    selectedRole: Role;
-//    roles: Observable<Netlist>;
-//    roleCategoryTypes = RoleCategoryTypes;
-//    selectedCategory: Role;
-//    isHidden: boolean = true;
-//    onSelect(role: Role): void {
-//        this.isHidden = false;
-//        this.selectedRole = role;
-//    }
-//    OnSelectCategory(roleCategory: Role): void {
-//        this.selectedCategory = roleCategory;
-//        //this.router.navigate(['/roleCategoryList']);
-//        // this.router.navigateByUrl('/list');
-//    }
-//    //getRoles() {
-//    //    this.roles = this.authService.getRoles();
-//    //    console.log(this.roles);
-//    //}
-//    getRoles() {
-//        this.authService.getRoles().subscribe(response => {
-//            //window.location.href = response.url;
-//        }), (error:any) => console.log('Error in Roles'),
-//            () => console.info('Error in Roles');
-//    }
-//}
 //# sourceMappingURL=role-categories.component.js.map

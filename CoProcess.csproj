@@ -115,14 +115,36 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\architect\architect.component.css" />
+    <Content Include="src\app\architect\architect.component.html" />
+    <Content Include="src\app\architect\architect.component.js" />
+    <Content Include="src\app\devteam\devteam.component.css" />
+    <Content Include="src\app\devteam\devteam.component.html" />
+    <Content Include="src\app\devteam\devteam.component.js" />
+    <Content Include="src\app\manager\manager.component.css" />
+    <Content Include="src\app\manager\manager.component.html" />
+    <Content Include="src\app\manager\manager.component.js" />
     <Content Include="src\app\product-owner\product-owner.component.css" />
     <Content Include="src\app\product-owner\product-owner.component.html" />
+    <Content Include="src\app\productowner\productowner.component.js" />
+    <Content Include="src\app\productowner\productowner.css" />
+    <Content Include="src\app\productowner\productowner.html" />
+    <Content Include="src\app\qa\qa.component.css" />
+    <Content Include="src\app\qa\qa.component.html" />
+    <Content Include="src\app\qa\qa.component.js" />
     <Content Include="src\app\role-categories-list\role-categories-list.html" />
     <Content Include="src\app\role-categories\role-categories.html" />
     <Content Include="src\assets\all.js" />
+    <Content Include="src\assets\Architect\Communication.jpg" />
+    <Content Include="src\assets\Architect\Programming.jpg" />
+    <Content Include="src\assets\Architect\Software Design.jpg" />
+    <Content Include="src\assets\Architect\Testing.jpg" />
     <Content Include="src\assets\img\client-needs.jpeg" />
     <Content Include="src\assets\img\comakeit-logo.png" />
+    <Content Include="src\assets\img\Defining the vision.jpg" />
     <Content Include="src\assets\img\lucid-chart.png" />
+    <Content Include="src\assets\img\Managing the product backlog.jpg" />
+    <Content Include="src\assets\img\Overseeing development stages.jpg" />
     <Content Include="src\assets\img\prioritising-needs.jpg" />
     <Content Include="src\assets\img\product-backlog.jpg" />
     <Content Include="src\assets\img\product-development.jpg" />
@@ -164,6 +186,12 @@
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper-utils.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="src\app\architect\architect.component.js.map" />
+    <Content Include="src\app\devteam\devteam.component.js.map" />
+    <Content Include="src\app\manager\manager.component.js.map" />
+    <Content Include="src\app\productowner\productowner.component.js.map" />
+    <Content Include="src\app\qa\qa.component.js.map" />
+    <Content Include="src\assets\documents\Well Home Loans-Case Study.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -178,11 +206,16 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\architect\architect.component.ts" />
     <TypeScriptCompile Include="src\app\auth.service.ts" />
+    <TypeScriptCompile Include="src\app\devteam\devteam.component.ts" />
+    <TypeScriptCompile Include="src\app\manager\manager.component.ts" />
     <TypeScriptCompile Include="src\app\material.module.ts" />
     <TypeScriptCompile Include="src\app\models\link.ts" />
     <TypeScriptCompile Include="src\app\models\netlist.ts" />
     <TypeScriptCompile Include="src\app\product-owner\product-owner.component.ts" />
+    <TypeScriptCompile Include="src\app\productowner\productowner.component.ts" />
+    <TypeScriptCompile Include="src\app\qa\qa.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories-list\role-categories-list.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-categories.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-category-constants.ts" />
@@ -191,6 +224,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\assets\DevTeam\" />
+    <Folder Include="src\assets\Manager\" />
+    <Folder Include="src\assets\QA\" />
+    <Folder Include="src\assets\ScrumMaster\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
