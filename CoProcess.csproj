@@ -127,6 +127,13 @@
     <Content Include="src\assets\img\product-backlog.jpg" />
     <Content Include="src\assets\img\product-development.jpg" />
     <Content Include="src\assets\img\vision.jpg" />
+    <Content Include="src\assets\Roles\Architect.jpg" />
+    <Content Include="src\assets\Roles\Dev Team.jpg" />
+    <Content Include="src\assets\Roles\Manager.jpg" />
+    <Content Include="src\assets\Roles\Product Owner.jpg" />
+    <Content Include="src\assets\Roles\QA.jpg" />
+    <Content Include="src\assets\Roles\QA.png" />
+    <Content Include="src\assets\Roles\scrummaster.png" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />

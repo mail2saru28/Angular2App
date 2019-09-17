@@ -22,7 +22,9 @@ var MaterialModule = /** @class */ (function () {
                 material_1.MatExpansionModule,
                 material_1.MatListModule,
                 angular_bootstrap_md_1.MDBBootstrapModule.forRoot(),
-                material_1.MatCardModule
+                material_1.MatCardModule,
+                material_1.MatNativeDateModule,
+                material_1.MatSidenavModule
             ],
             exports: [
                 material_1.MatButtonModule,
@@ -32,7 +34,9 @@ var MaterialModule = /** @class */ (function () {
                 material_1.MatExpansionModule,
                 material_1.MatListModule,
                 angular_bootstrap_md_1.MDBBootstrapModule,
-                material_1.MatCardModule
+                material_1.MatCardModule,
+                material_1.MatNativeDateModule,
+                material_1.MatSidenavModule
             ]
         })
     ], MaterialModule);

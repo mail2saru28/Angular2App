@@ -7,7 +7,9 @@ import {
     MatToolbarModule,
     MatExpansionModule,
     MatListModule,
-    MatCardModule 
+    MatCardModule,
+    MatNativeDateModule,
+    MatSidenavModule
     
 } from '@angular/material';
 
@@ -20,7 +22,9 @@ import {
         MatExpansionModule,
         MatListModule,
         MDBBootstrapModule.forRoot(),
-        MatCardModule 
+        MatCardModule,
+        MatNativeDateModule,
+        MatSidenavModule
     ],
     exports: [
         MatButtonModule,
@@ -30,7 +34,9 @@ import {
         MatExpansionModule,
         MatListModule,
         MDBBootstrapModule,
-        MatCardModule 
+        MatCardModule,
+        MatNativeDateModule,
+        MatSidenavModule
     ]
 })
 

@@ -40,7 +40,7 @@ h1 {
         background-color: #f5f9fd;
     }
 
-    .role span{
+    .role span {
         padding-left: 10px;
     }
 
@@ -61,4 +61,93 @@ h1 {
     background-color: #228be6;
     background-color: #145592 !important;
     border-color: #145592 !important;
+}
+
+.crm-navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+/* Only for snippet */
+.double-nav .breadcrumb-dn {
+    color: #fff;
+}
+
+.example-card {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.mat-card-image {
+    width: calc(100% + 36px) !important;
+    margin: 0 -24px 16px -18px !important;
+}
+
+.mat-card {
+    padding: 18px !important;
+}
+
+.image {
+    height: 150px;
+    max-height: 500px !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 48px;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sticky-top {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: #003366;
+}
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: #103d7b !important;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.nav-item {
+    /*color: #F68B17;*/
+    padding: 7px 0;
+}
+
+    .nav-item a {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: 1.05rem;
+        color: #027AC2 !important;
+    }
+
+        .nav-item a:hover {
+            color: #F68B17 !important;
+            text-decoration: none;
+        }
+
+
+.navbar-nav .nav-link {
+    display: inline;
 }

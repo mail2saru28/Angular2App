@@ -1,29 +1,20 @@
-﻿
-<div class="container">
-    <div class="row justify-content-md-around mt-5 background-white">
-        <div class="col-4 px-1">
-            <div class="" *ngFor="let role of roles">
-                <div class="p-3 text-off-white role"
-                     [routerLink]="['/product-owner']"
-                     [class.selected]="role === selectedRole">
-                    <i class="fas fa-user"></i>
-                    <span>
-                        {{role.roleName}}
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="col-7">
-            <div *ngFor="let link of links">
-                <div class="mt-2">
-                    <button class="btn btn-primary" [routerLink]="['/jump-start',link.linkId,link.linkName]" [class.selected]="link === SelectedLink">
-                        {{link.linkName}}
-                    </button>
-                    <span></span>
-                </div>
+﻿<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let role of roles">
+                <mat-card class="card mb-4 box-shadow" [routerLink]="['/product-owner']">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/Roles/Product Owner.jpg');background-size: cover; width: 40px; }"></div>
+                        <mat-card-title>{{role.roleName}}</mat-card-title>
+                        <mat-card-subtitle>A Person Represents Business </mat-card-subtitle>
+                    </mat-card-header>
+                    <img  mat-card-image class="image" src="/src/assets/Roles/{{role.roleName}}.jpg" alt="Card image cap">
+                    <mat-card-content>
+                    </mat-card-content>
+                </mat-card>
             </div>
         </div>
     </div>
-    <router-outlet></router-outlet>
 </div>
+<router-outlet></router-outlet>
 
