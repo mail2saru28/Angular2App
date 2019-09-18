@@ -92,6 +92,109 @@ namespace CoProcessWebApi.Controllers
             return response;
         }
 
+        [HttpGet]
+        [Route("getAllProductOwnerResponsibilities")]
+        public NetList<ProductOwnerResponsibility> GetAllProductOwnerResponsibilities()
+        {
+            var response = new NetList<ProductOwnerResponsibility>();
+            try
+            {
+                var data = db.ProductOwnerResponsibilities.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
 
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+
+            return response;
+        }
+        [HttpGet]
+        [Route("getArchitectResponsibilities")]
+        public NetList<ArchitectResponsibility> GetArchitectResponsibilities()
+        {
+            var response = new NetList<ArchitectResponsibility>();
+            try
+            {
+                var data = db.ArchitectResponsibilities.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
+
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+
+            return response;
+        }
+        [HttpGet]
+        [Route("getAllManagerResponsibilities")]
+        public NetList<Manager> GetAllManagerResponsibilities()
+        {
+            var response = new NetList<Manager>();
+            try
+            {
+                var data = db.Managers.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
+
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+            return response;
+        }
+        [HttpGet]
+        [Route("getDevTeamResponsibilities")]
+        public NetList<DevTeam> GetDevTeamresponsibilities()
+        {
+            var response = new NetList<DevTeam>();
+            try
+            {
+                var data = db.DevTeams.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
+
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+
+            return response;
+        }
+        [HttpGet]
+        [Route("getAllQAResponsibilities")]
+        public NetList<QA> GetAllQAResponsibilities()
+        {
+            var response = new NetList<QA>();
+            try
+            {
+                var data = db.QAs.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
+
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+
+            return response;
+        }
     }
 }

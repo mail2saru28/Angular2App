@@ -36,3 +36,14 @@
 .example-header-image {
     background-size: cover;
 }
+.card mb-4 box-shadow {
+    display: flex;
+}
+.mat-card-header {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+.mat-card-content {
+    flex-grow: 1;
+}
