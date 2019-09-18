@@ -1,177 +1,33 @@
-﻿
-<div class="jumbotron text-center">
-    <h1 class="jumbotron-heading">Product Owner</h1>
-    <p class="lead text-muted">a product owner is the leader responsible for maximizing the value of the products created by a scrum development team. But to do this, an agile product owner takes on several roles, including business strategist, product designer, market analyst, customer liaison, and project manager</p>
+﻿<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Product Owner</h1>
+        <p class="lead text-muted">a product owner is the leader responsible for maximizing the value of the products created by a scrum development team. But to do this, an agile product owner takes on several roles, including business strategist, product designer, market analyst, customer liaison, and project manager</p>
 
-</div>
-
-
+    </div>
+</section>
 <div class="album py-5 bg-light">
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" *ngFor="let responsibility of responsibilities">
                 <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
+                    <mat-card-header class="mat-card-header">
+                        <!--<div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/{{responsibility.name}}.jpg');"></div>-->
+                        <mat-card-title>{{responsibility.name}}</mat-card-title>
+                        <!--<mat-card-subtitle>product owner role</mat-card-subtitle>-->
                     </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
+                    <img   mat-card-image class="image" src="/src/assets/img/{{responsibility.name}}.jpg" alt="Card image cap">
+                    <mat-card-content class="mat-card-content">
                         <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
+                            {{responsibility.description}}
                         </p>
                     </mat-card-content>
                     <mat-card-actions layout="row" layout-align="end center">
-                        <a [href]="fileUrl" download="file.txt">DownloadFile</a>
+                        <a [href]="fileUrl" download="Well Home Loans-Case Study.pdf">DownloadFile</a>
                     </mat-card-actions>
                 </mat-card>
             </div>
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <div class="col-md-4">
-                <mat-card class="card mb-4 box-shadow">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image" style="background-image: url('/src/assets/img/prioritising-needs.jpg');"></div>
-                        <mat-card-title>Lucidchart to optimize project outcomes</mat-card-title>
-                        <mat-card-subtitle>product owner role</mat-card-subtitle>
-                    </mat-card-header>
-                    <img class="card-img-top mat-image" src="/src/assets/img/prioritising-needs.jpg" alt="Card image cap">
-                    <mat-card-content>
-                        <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                            bred for hunting.
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions layout="row" layout-align="end center">
-                        <a class="links" href="https://www.frontrowagile.com/blog/posts/74-the-role-of-a-product-owner-responsibilities-and-characteristics">Reference Templates</a>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
+            
         </div>
     </div>
 </div>

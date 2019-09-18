@@ -10,14 +10,10 @@ import { Netlist } from '../models/Netlist';
 export class ProductOwnerComponent implements OnInit  {
     fileUrl: any;
     responsibilities: any;
-    imageUrl: any;
-    Productimages: any = [];
-    url: any ='D:\newproject\src\assets\documents';
+    url: any ='/src/assets/documents';
 
     constructor(private authService: AuthService, private sanitizer: DomSanitizer) {
-        this.imageUrl = '/src/assets/img/';
-        this.Productimages = ['1.jpg', '2.jpg'];
-        
+ 
     }
     ngOnInit() {
         const data = 'some text';

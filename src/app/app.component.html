@@ -22,7 +22,7 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column" *ngFor="let role of roles">
                     <li class="nav-item">
-                        <a [routerLink]="['/product-owner']">
+                        <a [routerLink]="role.roleName">
                             {{role.roleName}}
                         </a>
                     </li>

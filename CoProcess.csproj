@@ -139,7 +139,8 @@
     <Content Include="src\assets\Architect\Programming.jpg" />
     <Content Include="src\assets\Architect\Software Design.jpg" />
     <Content Include="src\assets\Architect\Testing.jpg" />
-    <Content Include="src\assets\img\client-needs.jpeg" />
+    <Content Include="src\assets\img\Acting as primary liaison.jpg" />
+    <Content Include="src\assets\img\Anticipating client needs.jpg" />
     <Content Include="src\assets\img\comakeit-logo.png" />
     <Content Include="src\assets\img\Defining the vision.jpg" />
     <Content Include="src\assets\img\lucid-chart.png" />
@@ -155,6 +156,7 @@
     <Content Include="src\assets\Roles\Product Owner.jpg" />
     <Content Include="src\assets\Roles\QA.jpg" />
     <Content Include="src\assets\Roles\QA.png" />
+    <Content Include="src\assets\Roles\Scrum Master.jpg" />
     <Content Include="src\assets\Roles\scrummaster.png" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />

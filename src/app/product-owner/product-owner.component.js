@@ -16,10 +16,7 @@ var ProductOwnerComponent = /** @class */ (function () {
     function ProductOwnerComponent(authService, sanitizer) {
         this.authService = authService;
         this.sanitizer = sanitizer;
-        this.Productimages = [];
-        this.url = 'D:\newproject\src\assets\documents';
-        this.imageUrl = '/src/assets/img/';
-        this.Productimages = ['1.jpg', '2.jpg'];
+        this.url = '/src/assets/documents';
     }
     ProductOwnerComponent.prototype.ngOnInit = function () {
         var _this = this;

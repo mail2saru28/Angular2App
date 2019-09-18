@@ -17,9 +17,7 @@
     font-size: large
 }
 
-.example-card {
-    max-width: 300px;
-}
+
 
 .links {
     color: crimson
@@ -28,9 +26,6 @@
 .myclass {
     display: flex;
     margin: auto;
-}
-.example-card {
-    max-width: 400px;
 }
 
 .example-header-image {
@@ -46,4 +41,26 @@
 }
 .mat-card-content {
     flex-grow: 1;
+}
+
+.example-card {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.mat-card-image {
+    width: calc(100% + 36px) !important;
+    margin: 0 -24px 16px -18px !important;
+}
+
+.mat-card {
+    padding: 18px !important;
+}
+
+.image {
+    height: 150px;
+    max-height: 500px !important;
+    object-fit: cover;
+    object-position: center;
 }
