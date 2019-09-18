@@ -110,7 +110,12 @@ h1 {
     background-color: #ffffff !important;
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08);
 }
-
+.card-deck {
+    display: inline-grid !important;
+    /* display: flex; */
+    /*-ms-flex-direction: column;*/
+    /*flex-direction: column;*/
+}
 .sidebar {
     position: fixed;
     top: 0;
