@@ -13,6 +13,7 @@ export class DevTeamComponent implements OnInit {
     constructor(private authService: AuthService, private sanitizer: DomSanitizer) {
 
     }
+    ngOnChanges() { }
     ngOnInit() {
 
         this.authService.getDevTeamResponsibilities('getDevTeamResponsibilities')
@@ -22,4 +23,5 @@ export class DevTeamComponent implements OnInit {
                 console.log(this.responsibilities);
             });
     }
+   
 }
