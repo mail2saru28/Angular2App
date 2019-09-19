@@ -17,6 +17,7 @@ var DevTeamComponent = /** @class */ (function () {
         this.authService = authService;
         this.sanitizer = sanitizer;
     }
+    DevTeamComponent.prototype.ngOnChanges = function () { };
     DevTeamComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authService.getDevTeamResponsibilities('getDevTeamResponsibilities')
