@@ -4,8 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Netlist } from '../models/Netlist';
 @Component({
     selector: 'Scrum-Master',
-    templateUrl: './scrummaster.component.html',
-    styleUrls: ['./scrummaster.component.css']
+    templateUrl: './scrummaster.component.html'
 })
 export class ScrumMasterComponent implements OnInit {
     fileUrl: any;

@@ -28,8 +28,7 @@ var DevTeamComponent = /** @class */ (function () {
     DevTeamComponent = __decorate([
         core_1.Component({
             selector: 'app-devteam',
-            templateUrl: './devteam.component.html',
-            styleUrls: ['./devteam.component.css']
+            templateUrl: './devteam.component.html'
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], DevTeamComponent);

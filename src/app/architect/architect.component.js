@@ -29,7 +29,6 @@ var ArchitectComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'architect',
             templateUrl: './architect.component.html',
-            styleUrls: ['./architect.component.css']
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], ArchitectComponent);

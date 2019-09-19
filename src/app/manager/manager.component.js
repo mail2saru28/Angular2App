@@ -28,8 +28,7 @@ var ManagerComponent = /** @class */ (function () {
     ManagerComponent = __decorate([
         core_1.Component({
             selector: 'app-manager',
-            templateUrl: './manager.component.html',
-            styleUrls: ['./manager.component.css']
+            templateUrl: './manager.component.html'
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], ManagerComponent);

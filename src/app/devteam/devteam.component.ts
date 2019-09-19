@@ -4,8 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Netlist } from '../models/Netlist';
 @Component({
     selector: 'app-devteam',
-    templateUrl: './devteam.component.html',
-    styleUrls: ['./devteam.component.css']
+    templateUrl: './devteam.component.html'
 })
 export class DevTeamComponent implements OnInit {
     fileUrl: any;

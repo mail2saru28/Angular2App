@@ -33,8 +33,7 @@ var ScrumMasterComponent = /** @class */ (function () {
     ScrumMasterComponent = __decorate([
         core_1.Component({
             selector: 'Scrum-Master',
-            templateUrl: './scrummaster.component.html',
-            styleUrls: ['./scrummaster.component.css']
+            templateUrl: './scrummaster.component.html'
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], ScrumMasterComponent);

@@ -4,8 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Netlist } from '../models/Netlist';
 @Component({
     selector: 'app-qa',
-    templateUrl: './qa.component.html',
-    styleUrls: ['./qa.component.css']
+    templateUrl: './qa.component.html'
 })
 export class QAComponent implements OnInit {
     fileUrl: any;

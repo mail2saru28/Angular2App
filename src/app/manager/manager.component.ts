@@ -4,8 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { Netlist } from '../models/Netlist';
 @Component({
     selector: 'app-manager',
-    templateUrl: './manager.component.html',
-    styleUrls: ['./manager.component.css']
+    templateUrl: './manager.component.html'
 })
 export class ManagerComponent implements OnInit {
     fileUrl: any;

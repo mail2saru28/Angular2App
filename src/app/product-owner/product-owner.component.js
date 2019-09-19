@@ -21,9 +21,9 @@ var ProductOwnerComponent = /** @class */ (function () {
     ProductOwnerComponent.prototype.ngOnInit = function () {
         var _this = this;
         var data = 'some text';
-        var blob = new Blob([this.url], { type: 'application/octet-stream' });
+        var blob = new Blob([data], { type: 'application/octet-stream' });
         //this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
         this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
             .subscribe(function (responsibilities) {
             _this.responsibilities = responsibilities.collection;
@@ -33,20 +33,11 @@ var ProductOwnerComponent = /** @class */ (function () {
     ProductOwnerComponent = __decorate([
         core_1.Component({
             selector: 'product-owner',
-            templateUrl: './product-owner.component.html',
-            styleUrls: ['./product-owner.component.css']
+            templateUrl: './product-owner.component.html'
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], ProductOwnerComponent);
     return ProductOwnerComponent;
 }());
 exports.ProductOwnerComponent = ProductOwnerComponent;
-//getProductOwnerResponsibilities(): void {
-//    this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
-//        .subscribe(responsibilities => {
-//            this.responsibilities = responsibilities.collection;
-//            console.log(this.responsibilities);
-//        });
-//}
-//}
 //# sourceMappingURL=product-owner.component.js.map

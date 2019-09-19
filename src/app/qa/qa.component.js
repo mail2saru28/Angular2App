@@ -28,8 +28,7 @@ var QAComponent = /** @class */ (function () {
     QAComponent = __decorate([
         core_1.Component({
             selector: 'app-qa',
-            templateUrl: './qa.component.html',
-            styleUrls: ['./qa.component.css']
+            templateUrl: './qa.component.html'
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
     ], QAComponent);
