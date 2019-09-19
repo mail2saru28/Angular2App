@@ -9,7 +9,7 @@
 
 <router-outlet></router-outlet>-->
 <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0 p-3" [routerLink]="['/']">CoMakeIt Process</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0 p-3" [routerLink]="['/']">CoMethod Process</a>
     <div class="navbar-nav px-3" style="display:inline">
         <div class="nav-item text-nowrap nav-link " *ngFor="let link of links" >
             <a class="px-3" [routerLink]="['/jump-start',link.linkId,link.linkName]" > {{link.linkName}}</a>
@@ -20,13 +20,13 @@
     <div class="row">
         <nav class="col-md-2 d-none d-md-block sidebar">
             <div class="sidebar-sticky">
-                <ul class="nav flex-column" *ngFor="let role of roles">
+                <!--<ul class="nav flex-column" *ngFor="let role of roles">
                     <li class="nav-item">
                         <a [routerLink]="role.roleName">
                             {{role.roleName}}
                         </a>
                     </li>
-                </ul>
+                </ul>-->
 
             </div>
         </nav>

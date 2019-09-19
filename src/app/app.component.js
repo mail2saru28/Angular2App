@@ -19,20 +19,12 @@ var AppComponent = /** @class */ (function () {
         this.name = 'Angular';
         this.isHidden = true;
     }
-    AppComponent.prototype.ngOnInit = function () { this.getRoles(); this.getLinks(); };
+    AppComponent.prototype.ngOnInit = function () { this.getLinks(); };
     AppComponent.prototype.onSelect = function (role) {
         this.selectedRole = role;
     };
     AppComponent.prototype.OnSelectCategory = function (roleCategory) {
         this.selectedCategory = roleCategory;
-    };
-    AppComponent.prototype.getRoles = function () {
-        var _this = this;
-        this.authService.getRoles('getAllRoles')
-            .subscribe(function (roles) {
-            _this.roles = roles.collection;
-            console.log(_this.roles);
-        });
     };
     AppComponent.prototype.getLinks = function () {
         var _this = this;

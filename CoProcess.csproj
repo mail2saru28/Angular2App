@@ -126,9 +126,6 @@
     <Content Include="src\app\manager\manager.component.js" />
     <Content Include="src\app\product-owner\product-owner.component.css" />
     <Content Include="src\app\product-owner\product-owner.component.html" />
-    <Content Include="src\app\productowner\productowner.component.js" />
-    <Content Include="src\app\productowner\productowner.css" />
-    <Content Include="src\app\productowner\productowner.html" />
     <Content Include="src\app\qa\qa.component.css" />
     <Content Include="src\app\qa\qa.component.html" />
     <Content Include="src\app\qa\qa.component.js" />
@@ -209,7 +206,6 @@
     <Content Include="src\app\architect\architect.component.js.map" />
     <Content Include="src\app\devteam\devteam.component.js.map" />
     <Content Include="src\app\manager\manager.component.js.map" />
-    <Content Include="src\app\productowner\productowner.component.js.map" />
     <Content Include="src\app\qa\qa.component.js.map" />
     <Content Include="src\assets\documents\Well Home Loans-Case Study.pdf" />
     <Content Include="src\assets\documents\mywork.docx" />
@@ -235,7 +231,6 @@
     <TypeScriptCompile Include="src\app\models\link.ts" />
     <TypeScriptCompile Include="src\app\models\netlist.ts" />
     <TypeScriptCompile Include="src\app\product-owner\product-owner.component.ts" />
-    <TypeScriptCompile Include="src\app\productowner\productowner.component.ts" />
     <TypeScriptCompile Include="src\app\qa\qa.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories-list\role-categories-list.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-categories.component.ts" />

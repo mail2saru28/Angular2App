@@ -12,7 +12,7 @@ export class AppComponent {
     constructor(private router: Router, private authService: AuthService) {
 
     }
-    ngOnInit() { this.getRoles(); this.getLinks(); }
+    ngOnInit() {  this.getLinks(); }
     //roles: Role[];
     //roles = Roles;
     selectedRole: Role;
@@ -31,14 +31,7 @@ export class AppComponent {
         this.selectedCategory = roleCategory;
 
     }
-
-    getRoles(): void {
-        this.authService.getRoles('getAllRoles')
-            .subscribe(roles => {
-                this.roles = roles.collection;
-                console.log(this.roles);
-            });
-    }
+  
     getLinks(): void {
         this.authService.getLinks('getAllLinks').subscribe(links => { this.links = links.collection });
     }

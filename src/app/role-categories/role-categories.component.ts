@@ -15,7 +15,7 @@ export class RoleCategoriesComponent implements OnInit {
     constructor(private router: Router, private authService: AuthService) {
 
     }
-    ngOnInit() { this.getRoles(); this.getLinks(); }
+    ngOnInit() { this.getRoles();  }
     //roles: Role[];
     //roles = Roles;
     selectedRole: Role;
@@ -35,10 +35,6 @@ export class RoleCategoriesComponent implements OnInit {
 
     }
 
-    //getRoles() {
-    //    this.roles = this.authService.getRoles();
-    //    console.log(this.roles);
-    //}
     getRoles(): void {
         this.authService.getRoles('getAllRoles')
             .subscribe(roles => {
@@ -47,7 +43,5 @@ export class RoleCategoriesComponent implements OnInit {
                 console.log(this.roles);
             });
     }
-    getLinks(): void {
-        this.authService.getLinks('getAllLinks').subscribe(links => { this.links = links.collection });
-    }
+  
 }

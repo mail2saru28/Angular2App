@@ -18,17 +18,13 @@ var RoleCategoriesComponent = /** @class */ (function () {
         this.authService = authService;
         this.isHidden = true;
     }
-    RoleCategoriesComponent.prototype.ngOnInit = function () { this.getRoles(); this.getLinks(); };
+    RoleCategoriesComponent.prototype.ngOnInit = function () { this.getRoles(); };
     RoleCategoriesComponent.prototype.onSelect = function (role) {
         this.selectedRole = role;
     };
     RoleCategoriesComponent.prototype.OnSelectCategory = function (roleCategory) {
         this.selectedCategory = roleCategory;
     };
-    //getRoles() {
-    //    this.roles = this.authService.getRoles();
-    //    console.log(this.roles);
-    //}
     RoleCategoriesComponent.prototype.getRoles = function () {
         var _this = this;
         this.authService.getRoles('getAllRoles')
@@ -36,10 +32,6 @@ var RoleCategoriesComponent = /** @class */ (function () {
             _this.roles = roles.collection;
             console.log(_this.roles);
         });
-    };
-    RoleCategoriesComponent.prototype.getLinks = function () {
-        var _this = this;
-        this.authService.getLinks('getAllLinks').subscribe(function (links) { _this.links = links.collection; });
     };
     RoleCategoriesComponent = __decorate([
         core_1.Component({
