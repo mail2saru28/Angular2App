@@ -60,6 +60,12 @@ export class AuthService {
                 catchError(this.handleError)
             );
     }
+    getScrumMasterResponsibilities(url: string): Observable<Netlist> {
+        return this.httpService.get<Netlist>(this.apiUrl + "/" + url)
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
     private handleError(error: HttpErrorResponse) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.

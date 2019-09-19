@@ -8,6 +8,7 @@ import { ManagerComponent } from './manager/manager.component';
 import { DevTeamComponent } from './devteam/devteam.component';
 import { QAComponent } from './qa/qa.component';
 import { AppComponent } from './app.component';
+import { ScrumMasterComponent } from './scrummaster/scrummaster.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { MatExpansionModule } from '@angular/material';
@@ -28,10 +29,11 @@ import { ProductOwnerComponent } from '../app/product-owner/product-owner.compon
         { path: 'Manager', component: ManagerComponent },
         { path: 'Dev Team', component: DevTeamComponent },
         { path: 'QA', component: QAComponent },
+        { path: 'Scrum Master', component: ScrumMasterComponent },
 
     ]),
         MaterialModule, HttpModule, HttpClientModule],
-    declarations: [AppComponent, RoleCategoriesComponent, RoleCategoriesListComponent, ProductOwnerComponent, ArchitectComponent, ManagerComponent, DevTeamComponent, QAComponent],
+    declarations: [AppComponent, RoleCategoriesComponent, RoleCategoriesListComponent, ProductOwnerComponent, ArchitectComponent, ManagerComponent, DevTeamComponent, QAComponent, ScrumMasterComponent],
     bootstrap: [AppComponent],
     providers: [AuthService],
 })

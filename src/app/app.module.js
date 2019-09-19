@@ -16,6 +16,7 @@ var manager_component_1 = require("./manager/manager.component");
 var devteam_component_1 = require("./devteam/devteam.component");
 var qa_component_1 = require("./qa/qa.component");
 var app_component_1 = require("./app.component");
+var scrummaster_component_1 = require("./scrummaster/scrummaster.component");
 var router_1 = require("@angular/router");
 var animations_1 = require("@angular/platform-browser/animations");
 //import { MatExpansionModule } from '@angular/material';
@@ -38,9 +39,10 @@ var AppModule = /** @class */ (function () {
                     { path: 'Manager', component: manager_component_1.ManagerComponent },
                     { path: 'Dev Team', component: devteam_component_1.DevTeamComponent },
                     { path: 'QA', component: qa_component_1.QAComponent },
+                    { path: 'Scrum Master', component: scrummaster_component_1.ScrumMasterComponent },
                 ]),
                 material_module_1.MaterialModule, http_1.HttpModule, http_2.HttpClientModule],
-            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent, product_owner_component_1.ProductOwnerComponent, architect_component_1.ArchitectComponent, manager_component_1.ManagerComponent, devteam_component_1.DevTeamComponent, qa_component_1.QAComponent],
+            declarations: [app_component_1.AppComponent, role_categories_component_1.RoleCategoriesComponent, role_categories_list_component_1.RoleCategoriesListComponent, product_owner_component_1.ProductOwnerComponent, architect_component_1.ArchitectComponent, manager_component_1.ManagerComponent, devteam_component_1.DevTeamComponent, qa_component_1.QAComponent, scrummaster_component_1.ScrumMasterComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [auth_service_1.AuthService],
         })

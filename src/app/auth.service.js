@@ -49,6 +49,10 @@ var AuthService = /** @class */ (function () {
         return this.httpService.get(this.apiUrl + "/" + url)
             .pipe(operators_1.catchError(this.handleError));
     };
+    AuthService.prototype.getScrumMasterResponsibilities = function (url) {
+        return this.httpService.get(this.apiUrl + "/" + url)
+            .pipe(operators_1.catchError(this.handleError));
+    };
     AuthService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.

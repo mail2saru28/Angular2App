@@ -12,35 +12,35 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
 var platform_browser_1 = require("@angular/platform-browser");
-var ProductOwnerComponent = /** @class */ (function () {
-    function ProductOwnerComponent(authService, sanitizer) {
+var ScrumMasterComponent = /** @class */ (function () {
+    function ScrumMasterComponent(authService, sanitizer) {
         this.authService = authService;
         this.sanitizer = sanitizer;
         this.url = '/src/assets/documents';
     }
-    ProductOwnerComponent.prototype.ngOnInit = function () {
+    ScrumMasterComponent.prototype.ngOnInit = function () {
         var _this = this;
         var data = 'some text';
-        var blob = new Blob([this.url], { type: 'application/octet-stream' });
+        var blob = new Blob([data], { type: 'application/octet-stream' });
         //this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-        this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
+        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+        this.authService.getScrumMasterResponsibilities('getAllScrumMasterResponsibilities')
             .subscribe(function (responsibilities) {
             _this.responsibilities = responsibilities.collection;
             console.log(_this.responsibilities);
         });
     };
-    ProductOwnerComponent = __decorate([
+    ScrumMasterComponent = __decorate([
         core_1.Component({
-            selector: 'product-owner',
-            templateUrl: './product-owner.component.html',
-            styleUrls: ['./product-owner.component.css']
+            selector: 'Scrum-Master',
+            templateUrl: './scrummaster.component.html',
+            styleUrls: ['./scrummaster.component.css']
         }),
         __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
-    ], ProductOwnerComponent);
-    return ProductOwnerComponent;
+    ], ScrumMasterComponent);
+    return ScrumMasterComponent;
 }());
-exports.ProductOwnerComponent = ProductOwnerComponent;
+exports.ScrumMasterComponent = ScrumMasterComponent;
 //getProductOwnerResponsibilities(): void {
 //    this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
 //        .subscribe(responsibilities => {
@@ -49,4 +49,4 @@ exports.ProductOwnerComponent = ProductOwnerComponent;
 //        });
 //}
 //}
-//# sourceMappingURL=product-owner.component.js.map
+//# sourceMappingURL=scrummaster.component.js.map

@@ -18,6 +18,7 @@ namespace CoProcessWebApi.Context
         public DbSet<DevTeam> DevTeams { get; set; }
 
         public DbSet<QA> QAs { get; set; }
+        public DbSet<ScrumMaster> ScrumMasters { get; set; }
 
     }
 

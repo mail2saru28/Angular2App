@@ -8,8 +8,9 @@ namespace CoProcessWebApi.Common
     public class NetList<T>
     {
         public NetList()
+
         {
-            Collection = new List<T>();
+            Collection = new List<T>();           
         }
         public Guid Token { get; set; }
 

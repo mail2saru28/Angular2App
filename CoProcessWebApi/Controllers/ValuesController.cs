@@ -175,6 +175,7 @@ namespace CoProcessWebApi.Controllers
 
             return response;
         }
+
         [HttpGet]
         [Route("getAllQAResponsibilities")]
         public NetList<QA> GetAllQAResponsibilities()
@@ -183,6 +184,27 @@ namespace CoProcessWebApi.Controllers
             try
             {
                 var data = db.QAs.ToList();
+                response.Collection = data;
+                response.Status = ResponseStatus.Succeed;
+            }
+            catch (Exception ex)
+            {
+
+                response.Status = ResponseStatus.Failed;
+                response.Message = ex.Message;
+                response.Exception = ex;
+            }
+
+            return response;
+        }
+        [HttpGet]
+        [Route("getAllScrumMasterResponsibilities")]
+        public NetList<ScrumMaster> GetAllScrumMasterResponsibilities()
+        {
+            var response = new NetList<ScrumMaster>();
+            try
+            {
+                var data = db.ScrumMasters.ToList();
                 response.Collection = data;
                 response.Status = ResponseStatus.Succeed;
             }

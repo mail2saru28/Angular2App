@@ -134,11 +134,17 @@
     <Content Include="src\app\qa\qa.component.js" />
     <Content Include="src\app\role-categories-list\role-categories-list.html" />
     <Content Include="src\app\role-categories\role-categories.html" />
+    <Content Include="src\app\scrummaster\scrummaster.component.css" />
+    <Content Include="src\app\scrummaster\scrummaster.component.html" />
     <Content Include="src\assets\all.js" />
     <Content Include="src\assets\Architect\Communication.jpg" />
     <Content Include="src\assets\Architect\Programming.jpg" />
     <Content Include="src\assets\Architect\Software Design.jpg" />
     <Content Include="src\assets\Architect\Testing.jpg" />
+    <Content Include="src\assets\DevTeam\Build HighQuality Components and Solutions.jpg" />
+    <Content Include="src\assets\DevTeam\CollocationAndCollaboration.jpg" />
+    <Content Include="src\assets\DevTeam\Continuous Delivery.jpg" />
+    <Content Include="src\assets\DevTeam\Design for Testability.jpg" />
     <Content Include="src\assets\img\Acting as primary liaison.jpg" />
     <Content Include="src\assets\img\Anticipating client needs.jpg" />
     <Content Include="src\assets\img\comakeit-logo.png" />
@@ -150,6 +156,15 @@
     <Content Include="src\assets\img\product-backlog.jpg" />
     <Content Include="src\assets\img\product-development.jpg" />
     <Content Include="src\assets\img\vision.jpg" />
+    <Content Include="src\assets\Manager\Development Strategy.jpg" />
+    <Content Include="src\assets\Manager\Project Management.jpg" />
+    <Content Include="src\assets\Manager\Scheduling.jpg" />
+    <Content Include="src\assets\Manager\Team Management.jpg" />
+    <Content Include="src\assets\Manager\Team Resources.jpg" />
+    <Content Include="src\assets\QA\Defining Quality Metrics.jpg" />
+    <Content Include="src\assets\QA\Defining Testing Strategies.jpg" />
+    <Content Include="src\assets\QA\Leadership.jpg" />
+    <Content Include="src\assets\QA\Reporting.jpg" />
     <Content Include="src\assets\Roles\Architect.jpg" />
     <Content Include="src\assets\Roles\Dev Team.jpg" />
     <Content Include="src\assets\Roles\Manager.jpg" />
@@ -158,6 +173,9 @@
     <Content Include="src\assets\Roles\QA.png" />
     <Content Include="src\assets\Roles\Scrum Master.jpg" />
     <Content Include="src\assets\Roles\scrummaster.png" />
+    <Content Include="src\assets\ScrumMaster\Implement Project Management.jpg" />
+    <Content Include="src\assets\ScrumMaster\Introduce Agile Engineering Practices.jpg" />
+    <Content Include="src\assets\ScrumMaster\Keep all Parties on Track and Informed.jpg" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
@@ -194,6 +212,7 @@
     <Content Include="src\app\productowner\productowner.component.js.map" />
     <Content Include="src\app\qa\qa.component.js.map" />
     <Content Include="src\assets\documents\Well Home Loans-Case Study.pdf" />
+    <Content Include="src\assets\documents\mywork.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,17 +241,13 @@
     <TypeScriptCompile Include="src\app\role-categories\role-categories.component.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-category-constants.ts" />
     <TypeScriptCompile Include="src\app\role-categories\role-component.ts" />
+    <TypeScriptCompile Include="src\app\scrummaster\scrummaster.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\assets\DevTeam\" />
-    <Folder Include="src\assets\Manager\" />
-    <Folder Include="src\assets\QA\" />
-    <Folder Include="src\assets\ScrumMaster\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
