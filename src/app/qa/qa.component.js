@@ -11,11 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var platform_browser_1 = require("@angular/platform-browser");
 var QAComponent = /** @class */ (function () {
-    function QAComponent(authService, sanitizer) {
+    function QAComponent(authService) {
         this.authService = authService;
-        this.sanitizer = sanitizer;
     }
     QAComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -30,7 +28,7 @@ var QAComponent = /** @class */ (function () {
             selector: 'app-qa',
             templateUrl: './qa.component.html'
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
+        __metadata("design:paramtypes", [auth_service_1.AuthService])
     ], QAComponent);
     return QAComponent;
 }());

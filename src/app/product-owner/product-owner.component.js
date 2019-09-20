@@ -11,19 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var platform_browser_1 = require("@angular/platform-browser");
 var ProductOwnerComponent = /** @class */ (function () {
-    function ProductOwnerComponent(authService, sanitizer) {
+    function ProductOwnerComponent(authService) {
         this.authService = authService;
-        this.sanitizer = sanitizer;
-        this.url = '/src/assets/documents';
     }
     ProductOwnerComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var data = 'some text';
-        var blob = new Blob([data], { type: 'application/octet-stream' });
-        //this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
         this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
             .subscribe(function (responsibilities) {
             _this.responsibilities = responsibilities.collection;
@@ -35,7 +28,7 @@ var ProductOwnerComponent = /** @class */ (function () {
             selector: 'product-owner',
             templateUrl: './product-owner.component.html'
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
+        __metadata("design:paramtypes", [auth_service_1.AuthService])
     ], ProductOwnerComponent);
     return ProductOwnerComponent;
 }());

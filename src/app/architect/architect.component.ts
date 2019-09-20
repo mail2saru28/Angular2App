@@ -1,15 +1,13 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Netlist } from '../models/Netlist';
+
 @Component({
     selector: 'architect',
     templateUrl: './architect.component.html',
 })
 export class ArchitectComponent implements OnInit {
-    fileUrl: any;
     responsibilities: any;
-    constructor(private authService: AuthService, private sanitizer: DomSanitizer) {
+    constructor(private authService: AuthService) {
 
     }
     ngOnInit() {

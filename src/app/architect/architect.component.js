@@ -11,11 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var platform_browser_1 = require("@angular/platform-browser");
 var ArchitectComponent = /** @class */ (function () {
-    function ArchitectComponent(authService, sanitizer) {
+    function ArchitectComponent(authService) {
         this.authService = authService;
-        this.sanitizer = sanitizer;
     }
     ArchitectComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -30,7 +28,7 @@ var ArchitectComponent = /** @class */ (function () {
             selector: 'architect',
             templateUrl: './architect.component.html',
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
+        __metadata("design:paramtypes", [auth_service_1.AuthService])
     ], ArchitectComponent);
     return ArchitectComponent;
 }());

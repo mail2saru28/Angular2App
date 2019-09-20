@@ -3,9 +3,6 @@ import { Role } from './role-component';
 import { Roles, RoleCategoryTypes } from './role-category-constants';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { Netlist } from '../models/Netlist';
-import { HttpResponse } from '@angular/common/http';
-import { Observable } from "rxjs";
 
 @Component({
     selector: 'role-categories',
@@ -15,9 +12,7 @@ export class RoleCategoriesComponent implements OnInit {
     constructor(private router: Router, private authService: AuthService) {
 
     }
-    ngOnInit() { this.getRoles();  }
-    //roles: Role[];
-    //roles = Roles;
+    ngOnInit() { this.getRoles(); }
     selectedRole: Role;
     roles: Role[];
     links: any[];
@@ -43,5 +38,5 @@ export class RoleCategoriesComponent implements OnInit {
                 console.log(this.roles);
             });
     }
-  
+
 }

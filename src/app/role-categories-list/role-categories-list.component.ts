@@ -26,7 +26,6 @@ export class RoleCategoriesListComponent implements OnInit {
             this.id = params['id'];
             this.linkName = params['name']
         });
-        //this.paramsSub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10), this.linkName = params['name']);
         this.getLinkData();
     }
 

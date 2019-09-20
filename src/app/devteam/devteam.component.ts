@@ -1,7 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Netlist } from '../models/Netlist';
+
 @Component({
     selector: 'app-devteam',
     templateUrl: './devteam.component.html'
@@ -9,10 +8,9 @@ import { Netlist } from '../models/Netlist';
 export class DevTeamComponent implements OnInit {
     fileUrl: any;
     responsibilities: any;
-    constructor(private authService: AuthService, private sanitizer: DomSanitizer) {
+    constructor(private authService: AuthService) {
 
     }
-    ngOnChanges() { }
     ngOnInit() {
 
         this.authService.getDevTeamResponsibilities('getDevTeamResponsibilities')
@@ -22,5 +20,5 @@ export class DevTeamComponent implements OnInit {
                 console.log(this.responsibilities);
             });
     }
-   
+
 }

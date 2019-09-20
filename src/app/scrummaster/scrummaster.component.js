@@ -11,19 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var platform_browser_1 = require("@angular/platform-browser");
 var ScrumMasterComponent = /** @class */ (function () {
-    function ScrumMasterComponent(authService, sanitizer) {
+    function ScrumMasterComponent(authService) {
         this.authService = authService;
-        this.sanitizer = sanitizer;
-        this.url = '/src/assets/documents';
     }
     ScrumMasterComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var data = 'some text';
-        var blob = new Blob([data], { type: 'application/octet-stream' });
-        //this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
         this.authService.getScrumMasterResponsibilities('getAllScrumMasterResponsibilities')
             .subscribe(function (responsibilities) {
             _this.responsibilities = responsibilities.collection;
@@ -35,17 +28,9 @@ var ScrumMasterComponent = /** @class */ (function () {
             selector: 'Scrum-Master',
             templateUrl: './scrummaster.component.html'
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
+        __metadata("design:paramtypes", [auth_service_1.AuthService])
     ], ScrumMasterComponent);
     return ScrumMasterComponent;
 }());
 exports.ScrumMasterComponent = ScrumMasterComponent;
-//getProductOwnerResponsibilities(): void {
-//    this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
-//        .subscribe(responsibilities => {
-//            this.responsibilities = responsibilities.collection;
-//            console.log(this.responsibilities);
-//        });
-//}
-//}
 //# sourceMappingURL=scrummaster.component.js.map

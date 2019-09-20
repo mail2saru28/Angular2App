@@ -16,7 +16,7 @@ var operators_1 = require("rxjs/operators");
 var AuthService = /** @class */ (function () {
     function AuthService(httpService) {
         this.httpService = httpService;
-        this.apiUrl = "https://localhost:44339/api/Values";
+        this.apiUrl = "http://192.168.29.99:8080/api/values/";
     }
     AuthService.prototype.getRoles = function (url) {
         return this.httpService.get(this.apiUrl + "/" + url)

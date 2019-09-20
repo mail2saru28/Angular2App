@@ -10,7 +10,8 @@ import { map, catchError } from 'rxjs/operators'
     providedIn: 'root',
 })
 export class AuthService {
-    apiUrl: string = "https://localhost:44339/api/Values";
+    
+    apiUrl: string = "http://192.168.29.99:8080/api/values/";
     data: Netlist;
     constructor(public httpService: HttpClient) { }
 

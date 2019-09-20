@@ -1,34 +1,23 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Netlist } from '../models/Netlist';
+
 @Component({
     selector: 'product-owner',
     templateUrl: './product-owner.component.html'
 })
 export class ProductOwnerComponent implements OnInit {
-    fileUrl: any;
-    responsibilities: any;
-    url: any = '/src/assets/documents';
 
-    constructor(private authService: AuthService, private sanitizer: DomSanitizer) {
+    responsibilities: any;
+    constructor(private authService: AuthService) {
 
     }
     ngOnInit() {
-        const data = 'some text';
-        const blob = new Blob([data], { type: 'application/octet-stream' });
-
-        //this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-
-        this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-
-
-
         this.authService.getProductOwnerResponsibilities('getAllProductOwnerResponsibilities')
             .subscribe(responsibilities => {
 
                 this.responsibilities = responsibilities.collection;
                 console.log(this.responsibilities);
+
             });
     }
 }

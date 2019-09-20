@@ -25,7 +25,6 @@ var RoleCategoriesListComponent = /** @class */ (function () {
             _this.id = params['id'];
             _this.linkName = params['name'];
         });
-        //this.paramsSub = this.activatedRoute.params.subscribe(params => this.id = parseInt(params['id'], 10), this.linkName = params['name']);
         this.getLinkData();
     };
     RoleCategoriesListComponent.prototype.getLinkData = function () {

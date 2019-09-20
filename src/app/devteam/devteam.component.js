@@ -11,13 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var platform_browser_1 = require("@angular/platform-browser");
 var DevTeamComponent = /** @class */ (function () {
-    function DevTeamComponent(authService, sanitizer) {
+    function DevTeamComponent(authService) {
         this.authService = authService;
-        this.sanitizer = sanitizer;
     }
-    DevTeamComponent.prototype.ngOnChanges = function () { };
     DevTeamComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authService.getDevTeamResponsibilities('getDevTeamResponsibilities')
@@ -31,7 +28,7 @@ var DevTeamComponent = /** @class */ (function () {
             selector: 'app-devteam',
             templateUrl: './devteam.component.html'
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthService, platform_browser_1.DomSanitizer])
+        __metadata("design:paramtypes", [auth_service_1.AuthService])
     ], DevTeamComponent);
     return DevTeamComponent;
 }());

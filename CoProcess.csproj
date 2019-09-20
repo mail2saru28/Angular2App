@@ -209,6 +209,7 @@
     <Content Include="src\app\qa\qa.component.js.map" />
     <Content Include="src\assets\documents\Well Home Loans-Case Study.pdf" />
     <Content Include="src\assets\documents\mywork.docx" />
+    <Content Include="src\assets\Policy Rules Register v1.6.xlsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
